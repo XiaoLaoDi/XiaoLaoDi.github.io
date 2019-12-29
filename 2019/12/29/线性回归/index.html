@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="符号说明   符号 含义    $m$ 训练样本个数（从1开始）   $n$ 特征维度（从0开始）   $(x^{(i)}, y^{(i)})$ 表示第$i$个训练样本   线性回归模型模型：$h_{\theta}(x^{(i)})&#x3D;\sum^{n}_{j&#x3D;0}\theta_{j}x_{j}^{(i)}&#x3D;\Theta^{T}X$,$x_0&#x3D;1$   损失：$J(\Theta)&#x3D;\frac{1}">
+<meta name="description" content="符号说明   符号 含义    $m$ 训练样本个数（从1开始）   $n$ 特征维度（从0开始）   $(x^{(i)}, y^{(i)})$ 表示第 $i$ 个训练样本   线性回归模型模型： $\sum_{i&#x3D;0}^n i^2 &#x3D; \frac{(n^2+n)(2n+1)}{6}$, $\sum_{i&#x3D;0}^n i^2 &#x3D; \frac{(n^2+n)(2n+1)}{6}$  损失：$J(\">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线性回归">
 <meta property="og:url" content="http://yoursite.com/2019/12/29/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/index.html">
 <meta property="og:site_name" content="X.T.Xiao">
-<meta property="og:description" content="符号说明   符号 含义    $m$ 训练样本个数（从1开始）   $n$ 特征维度（从0开始）   $(x^{(i)}, y^{(i)})$ 表示第$i$个训练样本   线性回归模型模型：$h_{\theta}(x^{(i)})&#x3D;\sum^{n}_{j&#x3D;0}\theta_{j}x_{j}^{(i)}&#x3D;\Theta^{T}X$,$x_0&#x3D;1$   损失：$J(\Theta)&#x3D;\frac{1}">
+<meta property="og:description" content="符号说明   符号 含义    $m$ 训练样本个数（从1开始）   $n$ 特征维度（从0开始）   $(x^{(i)}, y^{(i)})$ 表示第 $i$ 个训练样本   线性回归模型模型： $\sum_{i&#x3D;0}^n i^2 &#x3D; \frac{(n^2+n)(2n+1)}{6}$, $\sum_{i&#x3D;0}^n i^2 &#x3D; \frac{(n^2+n)(2n+1)}{6}$  损失：$J(\">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-12-29T03:33:14.000Z">
-<meta property="article:modified_time" content="2019-12-29T03:57:01.997Z">
+<meta property="article:modified_time" content="2019-12-29T06:25:08.805Z">
 <meta property="article:author" content="X.T.Xiao">
 <meta property="article:tag" content="人工智能">
 <meta property="article:tag" content="机器学习">
@@ -324,29 +324,33 @@
       
 
       
-        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 <h1 id="符号说明"><a href="#符号说明" class="headerlink" title="符号说明"></a>符号说明</h1><table>
 <thead>
 <tr>
-<th>符号</th>
+<th align="center">符号</th>
 <th>含义</th>
 </tr>
 </thead>
 <tbody><tr>
-<td><code>$m$</code></td>
+<td align="center">$m$</td>
 <td>训练样本个数（从1开始）</td>
 </tr>
 <tr>
-<td><code>$n$</code></td>
+<td align="center">$n$</td>
 <td>特征维度（从0开始）</td>
 </tr>
 <tr>
-<td><code>$(x^{(i)}, y^{(i)})$</code></td>
-<td>表示第<code>$i$</code>个训练样本</td>
+<td align="center">$(x^{(i)}, y^{(i)})$</td>
+<td>表示第 $i$ 个训练样本</td>
 </tr>
 </tbody></table>
-<h1 id="线性回归模型"><a href="#线性回归模型" class="headerlink" title="线性回归模型"></a>线性回归模型</h1><p>模型：<code>$h_{\theta}(x^{(i)})=\sum^{n}_{j=0}\theta_{j}x_{j}^{(i)}=\Theta^{T}X$</code>,<code>$x_0=1$</code>   <br><br>损失：<code>$J(\Theta)=\frac{1}{2}\sum_{i=1}^{m}(h_{\Theta}(X^{(i)})-y^{(i)})^2$</code> <br></p>
+<h1 id="线性回归模型"><a href="#线性回归模型" class="headerlink" title="线性回归模型"></a>线性回归模型</h1><p>模型： $\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$, $\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$  <br/><br>损失：$J(\Theta)=\frac{1}{2}\sum_{i=1}^{m}(h_{\Theta}(X^{(i)})-y^{(i)})^2$  <br/></p>
+<p>\begin{align}<br>\sqrt{37} &amp; = \sqrt{\frac{73^2-1}{12^2}} \<br> &amp; = \sqrt{\frac{73^2}{12^2}\cdot\frac{73^2-1}{73^2}} \<br> &amp; = \sqrt{\frac{73^2}{12^2}}\sqrt{\frac{73^2-1}{73^2}} \<br> &amp; = \frac{73}{12}\sqrt{1 - \frac{1}{73^2}} \<br> &amp; \approx \frac{73}{12}\left(1 - \frac{1}{2\cdot73^2}\right)<br>\end{align}</p>
+<p>$$ \left[<br>\begin{array}{cc|c}<br>  1&amp;2&amp;3\<br>  4&amp;5&amp;6<br>\end{array}<br>\right] $$</p>
+<p>$$<br>    \begin{matrix}<br>    1 &amp; x &amp; x^2 \<br>    1 &amp; y &amp; y^2 \<br>    1 &amp; z &amp; z^2 \<br>    \end{matrix}<br>$$</p>
+<p>\lt \gt \le \leq \leqq \leqslant \ge \geq \geqq \geqslant \neq &lt;&gt;≤≤≦⩽≥≥≧⩾≠. You can use \not to put a slash through almost anything: \not\lt ≮ but it often looks bad.<br>\times \div \pm \mp ×÷±∓. \cdot is a centered dot: 𝑥⋅𝑦<br>\cup \cap \setminus \subset \subseteq \subsetneq \supset \in \notin \emptyset \varnothing ∪∩∖⊂⊆⊊⊃∈∉∅∅<br>{n+1 \choose 2k} or \binom{n+1}{2k} (𝑛+12𝑘)<br>\to \rightarrow \leftarrow \Rightarrow \Leftarrow \mapsto →→←⇒⇐↦<br>\land \lor \lnot \forall \exists \top \bot \vdash \vDash ∧∨¬∀∃⊤⊥⊢⊨<br>\star \ast \oplus \circ \bullet ⋆∗⊕∘∙<br>\approx \sim \simeq \cong \equiv \prec \lhd \therefore ≈∼≃≅≡≺⊲∴<br>\infty \aleph_0 ∞ℵ0 \nabla \partial ∇∂ \Im \Re ℑℜ<br>For modular equivalence, use \pmod like this: a\equiv b\pmod n 𝑎≡𝑏(mod𝑛).<br>\ldots is the dots in 𝑎1,𝑎2,…,𝑎𝑛 \cdots is the dots in 𝑎1+𝑎2+⋯+𝑎𝑛<br>Some Greek letters have variant forms: \epsilon \varepsilon 𝜖𝜀, \phi \varphi 𝜙𝜑, and others. Script lowercase l is \ell ℓ.</p>
 
       
     </div>
@@ -381,8 +385,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/12/29/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/12/29/%E8%B7%9D%E7%A6%BB%E3%80%81%E5%90%91%E9%87%8F%E3%80%81%E8%8C%83%E6%95%B0/" rel="next" title="距离、向量、范数">
+                <i class="fa fa-chevron-left"></i> 距离、向量、范数
               </a>
             
           </div>
@@ -466,7 +470,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -477,7 +481,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">categories</span>
                 
               </div>
@@ -488,7 +492,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
@@ -721,6 +725,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src=""></script>
+  
+
 
   
 
